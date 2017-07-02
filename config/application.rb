@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module TasksTracker
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
     config.load_defaults 5.1
 
     # Settings in config/environments/* take precedence over those specified here.
