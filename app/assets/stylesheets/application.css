@@ -22,3 +22,16 @@
    src: url('/assets/glyphicons-halflings-regular.eot');
    src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
  }
+th{
+  width: 10%;
+}
+a{
+  color: white !important;
+}
+.form-group .row .col-md-4{
+  float: right;
+}
+.glyphicon.glyphicon-chevron-down,
+.glyphicon.glyphicon-chevron-up{
+  color: lightcoral;
+}

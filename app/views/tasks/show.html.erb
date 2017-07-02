@@ -16,9 +16,9 @@
 </p>
 
 <p>
-  <strong>Duration:</strong>
+  <strong>Duration in Minutes:</strong>
   <%= @task.duration %>
 </p>
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+<button class="btn btn-primary" type="button"><%= link_to 'Edit', edit_task_path(@task) %> |</button>
+<button class="btn btn-primary" type="button"><%= link_to 'Back', tasks_path %></button>

@@ -1,3 +1,4 @@
+
 <%= form_with(model: task, local: true) do |form| %>
   <% if task.errors.any? %>
     <div id="error_explanation">
@@ -12,7 +13,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <label class="sr-only"><%= form.label :name %></label>
     <%= form.text_field :name, id: :task_name %>
   </div>
 
@@ -21,7 +22,7 @@
     <div style="overflow:hidden;">
     <div class="form-group">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-4">
                 <div id="datetimepicker12"></div>
             </div>
         </div>
@@ -47,7 +48,7 @@
     <%= form.number_field :duration, id: :task_duration %>
   </div>
 
-  <div class="actions">
+  <div class="btn btn-primary actions">
     <%= form.submit %>
   </div>
 <% end %>
