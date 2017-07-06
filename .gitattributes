@@ -1,2 +1,3 @@
 *.rb linguist-language=Ruby
 /app/models/* linguist-vendored
+*.js linguist-vendored=false
