@@ -1,14 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Tasks</h1>
+</br></br>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Deadline</th>
+      <th>Start Time</th>
+      <th>End Time</th>
       <th>Priority</th>
-      <th>Duration</th>
+      <th>Comments</th>
+      <th>Progress</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,9 +20,11 @@
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.name %></td>
-        <td><%= task.deadline %></td>
+        <td><%= task.start_date %></td>
+        <td><%= task.due_date %></td>
         <td><%= task.priority %></td>
-        <td><%= task.duration%>Minutes</td>
+        <td><%= task.progress%>%</td>
+
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
         <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>

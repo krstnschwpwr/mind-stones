@@ -2,12 +2,16 @@
 
 one:
   name: MyString
-  deadline: 2017-07-02 16:20:58
-  priority: 1
-  duration: 1
+  start_date: 2017-07-07 21:02:27
+  due_date: 2017-07-07 21:02:27
+  prority: 1
+  comment: MyString
+  progress: 1.5
 
 two:
   name: MyString
-  deadline: 2017-07-02 16:20:58
-  priority: 1
-  duration: 1
+  start_date: 2017-07-07 21:02:27
+  due_date: 2017-07-07 21:02:27
+  prority: 1
+  comment: MyString
+  progress: 1.5

@@ -6,8 +6,13 @@
 </p>
 
 <p>
-  <strong>Deadline:</strong>
-  <%= @task.deadline %>
+  <strong>Start Time:</strong>
+  <%= @task.start_date %>
+</p>
+
+<p>
+  <strong>End Time:</strong>
+  <%= @task.due_date %>
 </p>
 
 <p>
@@ -16,8 +21,13 @@
 </p>
 
 <p>
-  <strong>Duration in Minutes:</strong>
-  <%= @task.duration %>
+  <strong>Comment:</strong>
+  <%= @task.comment %>
+</p>
+
+<p>
+  <strong>Progress in Percent:</strong>
+  <%= @task.progress %>
 </p>
 
 <button class="btn btn-primary" type="button"><%= link_to 'Edit', edit_task_path(@task) %> |</button>
