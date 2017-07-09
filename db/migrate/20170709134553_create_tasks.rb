@@ -5,7 +5,7 @@ class CreateTasks < ActiveRecord::Migration[5.1]
       t.datetime :start_date
       t.datetime :due_date
       t.integer :priority
-      t.string :comment
+      t.text :comment
       t.float :progress
 
       t.timestamps

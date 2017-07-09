@@ -1,0 +1,41 @@
+
+<%= form_with(model: Milestone, local: true) do |form| %>
+  <% if task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(milestone.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% milestone.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <!--  ---------------------------------------------------------------------    -->
+  <!--  name field   -->
+  <div class="field">
+    <!--label class="sr-only"-->
+    <%= form.label :description %>
+    <!--/label-->
+    <%= form.text_field :description, id: :milestone_description %>
+  </div>
+  </br></br>
+
+
+  <!--  ---------------------------------------------------------------------    -->
+  <!--  due_date   -->
+  <div class="field">
+    <%= form.label :done %>
+    <%= form.check_box :done, id: :milestone_done %>
+  </div>
+  </br></br>
+
+
+  <!--  ---------------------------------------------------------------------    -->
+  <!--  submit button   -->
+  <div class="btn btn-primary actions">
+    <%= form.submit %>
+  </div>
+<% end %>

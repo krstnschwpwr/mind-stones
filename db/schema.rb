@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170707190417) do
+ActiveRecord::Schema.define(version: 20170709143918) do
 
   create_table "milestones", force: :cascade do |t|
     t.string "description"
     t.boolean "done"
-    t.datetime "duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,8 +29,8 @@ ActiveRecord::Schema.define(version: 20170707190417) do
     t.string "name"
     t.datetime "start_date"
     t.datetime "due_date"
-    t.integer "prority"
-    t.string "comment"
+    t.integer "priority"
+    t.text "comment"
     t.float "progress"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
