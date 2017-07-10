@@ -27,26 +27,6 @@
   <!--  start_date   -->
   <div class="field">
     <%= form.label :start_date %>
-
-    <!--div style="overflow:hidden;">
-    <div class="form-group">
-        </br>
-        <div class="column">
-            <div class="col-md-4">
-                <div id="datetimepicker_start_date"></div>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript">
-        $(function () {
-            $('#datetimepicker_start_date').datetimepicker({
-                inline: true,
-                sideBySide: true
-            });
-        });
-    </script>
-  </div-->
-
     <%= form.datetime_field :start_date, id: :task_start_time %>
   </div>
   </br></br>
@@ -55,26 +35,6 @@
   <!--  due_date   -->
   <div class="field">
     <%= form.label :due_date %>
-
-    <!--div style="overflow:hidden;">
-    <div class="form-group">
-        </br>
-        <div class="column">
-            <div class="col-md-4">
-                <div id="datetimepicker_due_date"></div>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript">
-        $(function () {
-            $('#datetimepicker_due_date').datetimepicker({
-                inline: true,
-                sideBySide: true
-            });
-        });
-    </script>
-  </div-->
-
     <%= form.datetime_field :due_date, id: :task_due_time %>
   </div>
   </br></br>
@@ -94,6 +54,20 @@
     <%= form.text_area :comment, id: :task_comment %>
   </div>
   </br></br>
+
+  <!--  ---------------------------------------------------------------------    -->
+  <!--  add milestone button   -->
+  <h2>Add a milestone:</h2>
+  <ul>
+      <%= form.fields_for :milestones do |ms| %>
+        <li>
+            <%= ms.check_box :_destroy%>
+            <%= ms.label :description %>
+            <%= ms.text_field :description %>
+        </li>
+      <% end %>
+  </ul>
+
 
   <!--  ---------------------------------------------------------------------    -->
   <!--  submit button   -->

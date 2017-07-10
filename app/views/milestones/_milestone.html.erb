@@ -1,0 +1,15 @@
+<p>
+  <strong>Milestone description:</strong>
+  <%= milestone.description %>
+</p>
+
+<p>
+  <strong>Done:</strong>
+  <%= milestone.done %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Milestone', [milestone.task, milestone],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

@@ -30,5 +30,8 @@
   <%= @task.progress %>
 </p>
 
-<button class="btn btn-primary" type="button"><%= link_to 'Edit', edit_task_path(@task) %> |</button>
+<h2>Milestones</h2>
+<%= render @task.milestones %>
+
+<button class="btn btn-primary" type="button"><%= link_to 'Edit', edit_task_path(@task) %></button>
 <button class="btn btn-primary" type="button"><%= link_to 'Back', tasks_path %></button>
