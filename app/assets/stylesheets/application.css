@@ -25,7 +25,8 @@
 th{
   width: 10%;
 }
-a{
+
+.btn a{
   color: white !important;
 }
 .form-group .row .col-md-4{
