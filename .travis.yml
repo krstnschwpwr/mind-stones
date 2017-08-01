@@ -1,0 +1,6 @@
+language: ruby
+script: 'true'
+services:
+  - postgresql
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
