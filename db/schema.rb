@@ -12,10 +12,13 @@
 
 ActiveRecord::Schema.define(version: 20170709194424) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "milestones", force: :cascade do |t|
     t.string "description"
     t.boolean "done"
-    t.integer "task_id"
+    t.bigint "task_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["task_id"], name: "index_milestones_on_task_id"
@@ -38,4 +41,5 @@ ActiveRecord::Schema.define(version: 20170709194424) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "milestones", "tasks"
 end
