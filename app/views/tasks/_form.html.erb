@@ -58,15 +58,13 @@
   <!--  ---------------------------------------------------------------------    -->
   <!--  add milestone button   -->
   <h2>Add a milestone:</h2>
-  <ul>
-      <%= form.fields_for :milestones do |ms| %>
-        <li>
-            <%= ms.check_box :_destroy%>
-            <%= ms.label :description %>
-            <%= ms.text_field :description %>
-        </li>
-      <% end %>
-  </ul>
+
+  <div class="field">
+    <%= form.fields_for :milestones do |builder| %>
+      <%= render "milestones/form", :form => builder %>
+    <% end %>
+  </div>
+  </br></br>
 
 
   <!--  ---------------------------------------------------------------------    -->

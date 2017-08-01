@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170709194424) do
+ActiveRecord::Schema.define(version: 20170710135849) do
 
   create_table "milestones", force: :cascade do |t|
     t.string "description"
@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20170709194424) do
     t.integer "task_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["task_id"], name: "index_milestones_on_task_id"
   end
 
   create_table "my_days", force: :cascade do |t|

@@ -1,9 +1,10 @@
 class MilestonesController < ApplicationController
 
   def create
-    @task = Task.find(params[:task_id])
-    @milestone = @task.milestones.create(milestone_params)
+    #@task = Task.find(params[:task_id])
+    #@milestone = @task.milestones.create(milestone_params)
     # redirect_to task_path(@task)
+    @milestone = Milestone.new(product_type_id: params[:product_type_id])
   end
 
   def destroy

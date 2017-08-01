@@ -31,7 +31,11 @@
 </p>
 
 <h2>Milestones</h2>
-<%= render @task.milestones %>
+<ol>
+<%= for milestone in @taks.milestones %>
+  <li><% milestone.description %></li>
+<% end %>
+</ol>
 
 <button class="btn btn-primary" type="button"><%= link_to 'Edit', edit_task_path(@task) %></button>
 <button class="btn btn-primary" type="button"><%= link_to 'Back', tasks_path %></button>
