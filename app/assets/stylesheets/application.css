@@ -16,23 +16,144 @@
  *= require bootstrap-datetimepicker
  */
 
- @font-face {
-   font-family: 'Glyphicons Halflings';
+@font-face {
+    font-family: 'Glyphicons Halflings';
 
-   src: url('/assets/glyphicons-halflings-regular.eot');
-   src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
- }
-th{
-  width: 10%;
+    src: url('/assets/glyphicons-halflings-regular.eot');
+    src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
-.btn a{
-  color: white !important;
+th {
+    width: 10%;
 }
-.form-group .row .col-md-4{
-  float: right;
+
+.btn a {
+    color: white !important;
 }
+
+.row {
+    width: 100%;
+}
+
 .glyphicon.glyphicon-chevron-down,
-.glyphicon.glyphicon-chevron-up{
-  color: lightcoral;
+.glyphicon.glyphicon-chevron-up {
+    color: lightcoral;
+}
+
+.navbar-inverse {
+    background-color: #9529F3 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    height: 50px !important;
+
+}
+
+.navbar-inverse a {
+    color: white !important;
+}
+
+.navbar-brand img {
+    width: auto;
+    height: 50px;
+}
+
+.navbar-brand {
+    float: none !important;
+}
+
+.cc img {
+    height: 26px;
+    width: auto;
+
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #9529F3 !important
+}
+
+.right {
+    position: absolute;
+    right: 2%;
+}
+
+.button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    background-color: #50E3C2 !important;
+}
+
+.btn-primary {
+    background-color: #50E3C2 !important;
+    border: none !important;
+
+}
+
+form input[type="submit"] {
+    width: 100% !important;
+    padding: 4%;
+    border-radius: 25px;
+    margin-top: 5%;
+    display: block;
+    margin-bottom: 5%;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.form-group p {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-group p a {
+    color: #50E3C2;
+}
+
+.form-group {
+
+    width: auto;
+}
+
+ h1 {
+    text-align: center;
+    margin-bottom: 10%;
+     margin-top: 5% !important;
+}
+
+.col-md-4 .row {
+    margin-top: 20%;
+}
+
+.cntr {
+    margin-left: 3%;
+}
+
+td a {
+    color: #FF548F;
+
+}
+
+.btn.btn-primary.actions, .btn.btn-primary.actions input[type="submit"] {
+    background: #FF548F !important;
+}
+.back{
+    width: 100% !important;
+    padding: 4% !important;
+    border-radius: 25px;
+    margin-top: 5%;
+    display: block;
+    margin-bottom: 5%;
+    background-color: #9529F3 !important;
+}
+
+.col-md-12 button, .col-md-3 input[type="submit"] {
+    float: right;
+
+    border-radius: 25px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#tasks form {
+    width: 100%;
 }

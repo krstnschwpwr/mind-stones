@@ -1,75 +1,91 @@
+<div class="col-md-12">
+  <div class="col-md-3"></div>
+  <div class="col-md-6 cntr" id="tasks">
+    <%= form_with(model: task, local: true) do |form| %>
+        <% if task.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
 
-<%= form_with(model: task, local: true) do |form| %>
-  <% if task.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+              <ul>
+                <% task.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
 
-      <ul>
-      <% task.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <br><br>
+        <div class="col-md-6">
+
+          <!--  ---------------------------------------------------------------------    -->
+          <!--  name field   -->
+          <div class="field">
+            <!--label class="sr-only"-->
+            <%= form.label :name %>
+            <!--/label-->
+            <%= form.text_field :name, id: :task_name, class: 'form-control' %>
+          </div>
+          </br></br>
+
+          <!--  ---------------------------------------------------------------------    -->
+          <!--  start_date   -->
+          <div class="field">
+            <%= form.label :start_date %>
+            <%= form.datetime_field :start_date, id: :task_start_time, class: 'form-control' %>
+          </div>
+          </br></br>
+
+          <!--  ---------------------------------------------------------------------    -->
+          <!--  due_date   -->
+          <div class="field">
+            <%= form.label :due_date %>
+            <%= form.datetime_field :due_date, id: :task_due_time, class: 'form-control' %>
+          </div>
+          </br></br>
+
+          <!--  add milestone button   -->
+          <h2>Add a milestone:</h2>
+
+          <div class="field">
+            <%= form.fields_for :milestones do |builder| %>
+                <%= render "milestones/form", :form => builder %>
+            <% end %>
+          </div>
+          </br></br>
+
+        </div>
+
+        <div class="col-md-6">
+          <!--  ---------------------------------------------------------------------    -->
+          <!--  priority field   -->
+          <div class="field">
+            <%= form.label :priority %>
+            <%= form.number_field :priority, id: :task_priority, class: 'form-control' %>
+          </div>
+          </br></br>
+
+          <!--  ---------------------------------------------------------------------    -->
+          <!--  comment field   -->
+          <div class="field">
+            <%= form.label :comment %>
+            <%= form.text_area :comment, id: :task_comment, class: 'form-control' %>
+          </div>
+          </br></br>
 
 
-  <!--  ---------------------------------------------------------------------    -->
-  <!--  name field   -->
-  <div class="field">
-    <!--label class="sr-only"-->
-    <%= form.label :name %>
-    <!--/label-->
-    <%= form.text_field :name, id: :task_name %>
-  </div>
-  </br></br>
+          <div class="col-md-3">
 
-  <!--  ---------------------------------------------------------------------    -->
-  <!--  start_date   -->
-  <div class="field">
-    <%= form.label :start_date %>
-    <%= form.datetime_field :start_date, id: :task_start_time %>
-  </div>
-  </br></br>
 
-  <!--  ---------------------------------------------------------------------    -->
-  <!--  due_date   -->
-  <div class="field">
-    <%= form.label :due_date %>
-    <%= form.datetime_field :due_date, id: :task_due_time %>
-  </div>
-  </br></br>
 
-  <!--  ---------------------------------------------------------------------    -->
-  <!--  priority field   -->
-  <div class="field">
-    <%= form.label :priority %>
-    <%= form.number_field :priority, id: :task_priority %>
-  </div>
-  </br></br>
+          </div>
+          <%= form.submit "Create",  class: "btn btn-primary" %>
+          <button class="btn back btn-primary"><%= link_to 'Back', tasks_path %></button>
+          <!--  submit button   -->
 
-  <!--  ---------------------------------------------------------------------    -->
-  <!--  comment field   -->
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_area :comment, id: :task_comment %>
-  </div>
-  </br></br>
+        </div>
+        <!--  ---------------------------------------------------------------------    -->
 
-  <!--  ---------------------------------------------------------------------    -->
-  <!--  add milestone button   -->
-  <h2>Add a milestone:</h2>
-
-  <div class="field">
-    <%= form.fields_for :milestones do |builder| %>
-      <%= render "milestones/form", :form => builder %>
     <% end %>
-  </div>
-  </br></br>
 
-
-  <!--  ---------------------------------------------------------------------    -->
-  <!--  submit button   -->
-  <div class="btn btn-primary actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
+</div>

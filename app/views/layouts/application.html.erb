@@ -7,7 +7,23 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/tasks"><img src='/assets/Logo.png'></a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/tasks">My Tasks</a></li>
+        <li><a href="/tasks/new" class="cc"><img src="/assets/add.png"></a></li>
 
+      </ul>
+      <ul class="nav navbar-nav right">
+
+        <li><a id="signup" href="/signup">Sign Up</a></li>
+        <li><a id="signin" href="/login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
   <body>
     <%= yield %>
   </body>

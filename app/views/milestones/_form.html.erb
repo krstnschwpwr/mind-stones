@@ -3,7 +3,7 @@
   <%= form.fields_for :milestones do |ms| %>
     <p>
       <%= ms.label :milestone_description, 'Milestone Description'  %> </br>
-      <%= ms.text_field :description %> </br>
+      <%= ms.text_field :description, class: 'form-control'%> </br>
       <%= ms.hidden_field :_destroy %> </br>
 
     </p>
